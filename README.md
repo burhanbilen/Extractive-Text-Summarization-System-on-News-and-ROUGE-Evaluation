@@ -4,4 +4,4 @@ Deneysel.py dosyasında tasarımsal kodlar yoktur ve dökümanların ROUGE değe
 
 Tasarımsal.py dosyasında ise sadece kullanıcı arayüzü vardır ve özet çıkarma fonksiyonu kullanılır.
 
-Proje, ticari olmayan herhangi bir amaç için kullanılabilir ve kodlar kullanıldığında, referans gösterilmesi beni mutlu eder.
+Proje, ticari olmayan amaçlar için kullanılabilir.
