@@ -1,2 +1,4 @@
-# Extractive-Text-Summarization-System-on-News-and-ROUGE-Evaluation
-Automatic summarization system based on feature extraction and sentence selection
+Briefly, this system is based on sentence scoring and selection.
+The dataset used is available at http://mlg.ucd.ie/datasets/bbc.html .
+
+The project can be used for any non-commercial issue.
