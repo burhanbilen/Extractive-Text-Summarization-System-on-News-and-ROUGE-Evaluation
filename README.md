@@ -1,4 +1,5 @@
-Briefly, this system is based on sentence scoring and selection.
-The dataset used is available at http://mlg.ucd.ie/datasets/bbc.html .
+Özet olarak, bu sistem cümle puanlama ve seçilim üzerinedir. Projede kullanılan veri seti, http://mlg.ucd.ie/datasets/bbc.html adresinden elde edilebilir.
 
-The project can be used for any non-commercial issue.
+Deneysel.py dosyasında tasarımsal kodlar yoktur ve dökümanların ROUGE değerlendirilmesi yapılır, ayrıca kodların açıklanması yorum satırı olarak eklenmiştir. Tasarımsal.py dosyasında ise sadece kullanıcı arayüzü vardır ve özet çıkarma fonksiyonu kullanılır.
+
+Proje, ticari olmayan herhangi bir amaç için kullanılabilir ya da kodlar kullanıldığında, referans gösterilmesi beni mutlu eder.
