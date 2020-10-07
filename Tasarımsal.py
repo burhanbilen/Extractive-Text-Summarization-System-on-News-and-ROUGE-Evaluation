@@ -1,5 +1,6 @@
 import re
 import codecs
+import numpy as np
 from nltk.corpus import stopwords
 from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize, sent_tokenize
@@ -42,6 +43,20 @@ class metin_ozeti:
 
         self.pencere.mainloop()
 
+    def BOW_vektormetin(self, metin, cumle):
+        vocabulary = set(list(word_tokenize(metin)))
+        d = dict()
+        for i in vocabulary:
+            d[i] = 0
+
+        for i in word_tokenize(cumle):
+            if i in vocabulary:
+                d[i] = d.get(i, 0) + 1
+
+        matris = list(d.values())
+        norm = np.linalg.norm(matris)
+        normal_array = matris / norm
+        return normal_array
 
     def Ozet_Cıkar(self):
         metinyolu = askopenfilename(filetypes=[("Metin Belgesi", "*.txt")], title="Bir Metin Seç")
@@ -60,7 +75,6 @@ class metin_ozeti:
         self.dosyayolu.set(metinyolu)
 
         stopWords = list(stopwords.words('english'))  
-
         kelimeler = word_tokenize(str(metin_veri))
         cumleler = sent_tokenize(str(metin_veri))
 
@@ -172,7 +186,6 @@ class metin_ozeti:
                 break
             else:
                 dosya_adi += i
-
         try:
             kayıt = asksaveasfile(initialfile=dosya_adi[::-1] + " - Özet", mode='w', title="Özeti Kaydet", filetypes=[("Metin Belgesi", ".txt")], defaultextension=".txt")
             kayıt.write(self.ozet)
